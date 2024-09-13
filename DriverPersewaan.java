@@ -12,9 +12,9 @@ public class DriverPersewaan {
         pilihan = a.nextLine();
 
         if (pilihan.equalsIgnoreCase("CD")) {
-            cd.CDprint();
+            cd.print();
         } else if (pilihan.equalsIgnoreCase("DVD")) {
-            dvd.DVDprint();
+            dvd.print();
         }
         a.close();
     }

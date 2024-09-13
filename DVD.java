@@ -3,23 +3,47 @@ public class DVD extends Product {
     private String rating;
     private String studio;
 
+    public int getLength() {
+        return this.length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public String getRating() {
+        return this.rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getStudio() {
+        return this.studio;
+    }
+
+    public void setStudio(String studio) {
+        this.studio = studio;
+    }
+
     public DVD() {
-        number = 10;
-        name = "DVD Album";
-        quantity = 0;
-        price = 0.0;
+
+        super();
         length = 0;
         rating = "18+";
         studio = "Falling Musical";
     }
 
-    public void DVDprint() {
-        System.out.println("");
-        System.out.println("CD");
-        System.out.println("Number: "+ number);
-        System.out.println("Name: " + name);
-        System.out.println("Quantity: "+quantity);
-        System.out.println("Price: "+price);
+    public DVD(int length, String rating, String studio) {
+        this.length = length;
+        this.rating = rating;
+        this.studio = studio;
+    }
+
+    @Override
+    public void print() {
+        super.print();
         System.out.println("Length: "+length);
         System.out.println("Rating: "+rating);
         System.out.println("Studio: "+studio);

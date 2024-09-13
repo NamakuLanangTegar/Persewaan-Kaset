@@ -3,26 +3,49 @@ public class CD extends Product {
     private int totalSong;
     private String label;
 
+    public String getArtist() {
+        return this.artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public int getTotalSong() {
+        return this.totalSong;
+    }
+
+    public void setTotalSong(int totalSong) {
+        this.totalSong = totalSong;
+    }
+
+    public String getLabel() {
+        return this.label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
     public CD() {
             
-        number = 10;
-        name = "CD Album";
-        quantity = 400;
-        price = 50000.0;
+        super();
         artist = "Hyo";
         totalSong = 17;
         label = "Sony Music";
     }
 
-    public void CDprint() {
-        System.out.println("");
-        System.out.println("CD");
-        System.out.println("Number: "+ number);
-        System.out.println("Name: " + name);
-        System.out.println("Quantity: "+quantity);
-        System.out.println("Price: "+price);
-        System.out.println("Artist: "+artist);
-        System.out.println("Total Song: "+totalSong);
-        System.out.println("Label: "+label);
+    public CD(String artist, int totalSong, String label) {
+        this.artist = artist;
+        this.totalSong = totalSong;
+        this.label = label;
+    }
+    
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("Artist: "+ artist);
+        System.out.println("Total song: "+ totalSong);
+        System.out.println("Label: "+ label);
     }
 }
